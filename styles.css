@@ -1,0 +1,18 @@
+.container-fluid                                                { position: absolute; top: 0; right: 450px; bottom: 0; left: 0; padding: 0; margin:0;}
+.container-fluid > .sidebar                                     { position: fixed; top: 0; right: 0; bottom: 0; width: 450px; border-left: 2px solid #ddd; }
+.container-fluid > .sidebar > #table  > div > .row              { position: absolute; right: 0; left: 0; margin: 0; padding: 10px 0; }
+.container-fluid > .sidebar > #table  > div > .row:nth-child(1) { top: 0; height: 50px; border-bottom: 2px solid #ddd; }
+.container-fluid > .sidebar > #table  > div > .row:nth-child(2) { position: absolute; top: 50px; padding: 0; /* right: 0; */ /* left: 0; */ bottom: 90px; overflow: auto; border-bottom: 2px solid #ddd; }
+.container-fluid > .sidebar > #table  > div > .row:nth-child(3) { bottom: 0; }
+
+.dataTables_info                   { position: absolute; bottom: 50px; }
+.dataTables_filter > label > input { width: 140px; }
+.dataTables_filter                 { position: fixed; top: 10px; right: 10px; }
+.dataTables_paginate               { position: absolute; right: 10px; bottom: 0; left: 10px; text-align: left!important; }
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 { margin: 0; }
+
+.col-sm-12 { padding: 0; }
+.col-sm-6  { width: 100%!important; }
+
+tfoot { display: none; }
