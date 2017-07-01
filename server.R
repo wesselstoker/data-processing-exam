@@ -33,8 +33,7 @@ function(input, output, session) {
   # add the circles the world map
   leafletProxy("map", data=allCities) %>%
     clearShapes() %>%
-    addCircles(~longitude, ~latitude, radius=~radius, layerId=~id,
-               stroke=FALSE, fillOpacity =~opacity, fillColor='#ff0000')
+    addCircles(~longitude, ~latitude, radius=~radius, layerId=~id, stroke=FALSE, fillOpacity =~opacity, fillColor='#ff0000')
   
   # add the cities that are in bound to the table
   output$table = renderDataTable({
