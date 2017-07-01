@@ -1,8 +1,8 @@
 library(leaflet)
 library(plotly)
 
-navbarPage("Superzip", id="nav",
-  tabPanel("Interactive map",
+navbarPage("", id="nav",
+  tabPanel("Interactive world map",
     tags$head(
       includeCSS("styles.css")
     ),
@@ -14,7 +14,11 @@ navbarPage("Superzip", id="nav",
       dataTableOutput('table')
     )
   ),
-  tabPanel("Country clustering",
+  tabPanel("In-depth Clustering",
+    tags$head(
+      includeCSS("styles.css")
+    ),
+    # render bubble graph
     plotlyOutput("bubbles")        
   )
 )

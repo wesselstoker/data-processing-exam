@@ -15,7 +15,7 @@ allGDPCountries <- select(allGDPCountries, country_iso3=Country.Code, gdp=X2016)
 allCities <- read.csv('data/WHO_AAP_database_May2016_v3web.csv')
 
 # normalize the pollution dataset
-allCities <- select(allCities, country=Country, city=City.Town, pollution=Annual.mean..ug.m3)
+allCities <- select(allCities, country=Country, city=City.Town, pollution=Annual.mean..ug.m3, country_iso3=iso3)
 allCities$city <- tolower(allCities$city)
 allCities$pollution <- floor(allCities$pollution)
 
@@ -51,6 +51,7 @@ clustering <- kmeans(clusteringData, 5, nstart=100)
 # combine the clustering results with the original data
 allCities['cluster'] <- clustering$cluster
 
-
+# format cluster name in a nice way
+allCities$cluster <- paste("Cluster", allCities$cluster, sep=" ")
 
 
