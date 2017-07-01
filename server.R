@@ -1,6 +1,7 @@
 library(leaflet)
 library(RColorBrewer)
 library(scales)
+library(plotly)
 library(lattice)
 library(dplyr)
 
@@ -39,5 +40,17 @@ function(input, output, session) {
   output$table = renderDataTable({
     citiesInBounds()
   })
+  
+  # create bubble visualisation
+  output$bubbles <- renderPlotly ({
+    
+    colors <- c('#4AC6B7', '#1972A4', '#965F8A', '#FF7070', '#C61951')
+    
+    plot_ly(allCities, x = ~gdp, y = ~pollution, text = ~city, type = 'scatter', color = ~cluster, colors = colors,
+            mode = 'markers', marker = list(size = 5, opacity = 0.5)) %>%
+      layout(title = 'Gender Gap in Earnings per University',
+             xaxis = list(showgrid = FALSE),
+             yaxis = list(showgrid = FALSE))
 
+    })
 }

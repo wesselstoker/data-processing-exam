@@ -1,9 +1,9 @@
 .container-fluid                                                { position: absolute; top: 0; right: 450px; bottom: 0; left: 0; padding: 0; margin:0;}
-.container-fluid > .sidebar                                     { position: fixed; top: 0; right: 0; bottom: 0; width: 450px; border-left: 2px solid #ddd; }
-.container-fluid > .sidebar > #table  > div > .row              { position: absolute; right: 0; left: 0; margin: 0; padding: 10px 0; }
-.container-fluid > .sidebar > #table  > div > .row:nth-child(1) { top: 0; height: 50px; border-bottom: 2px solid #ddd; }
-.container-fluid > .sidebar > #table  > div > .row:nth-child(2) { position: absolute; top: 50px; padding: 0; /* right: 0; */ /* left: 0; */ bottom: 90px; overflow: auto; border-bottom: 2px solid #ddd; }
-.container-fluid > .sidebar > #table  > div > .row:nth-child(3) { bottom: 0; }
+.sidebar                                     { position: fixed; top: 0; right: 0; bottom: 0; width: 450px; border-left: 2px solid #ddd; }
+.sidebar > #table  > div > .row              { position: absolute; right: 0; left: 0; margin: 0; padding: 10px 0; }
+.sidebar > #table  > div > .row:nth-child(1) { top: 0; height: 50px; border-bottom: 2px solid #ddd; }
+.sidebar > #table  > div > .row:nth-child(2) { position: absolute; top: 50px; padding: 0; /* right: 0; */ /* left: 0; */ bottom: 90px; overflow: auto; border-bottom: 2px solid #ddd; }
+.sidebar > #table  > div > .row:nth-child(3) { bottom: 0; }
 
 .dataTables_info                   { position: absolute; bottom: 50px; }
 .dataTables_filter > label > input { width: 140px; }
@@ -16,3 +16,5 @@
 .col-sm-6  { width: 100%!important; }
 
 tfoot { display: none; }
+
+#map { position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
